@@ -27,6 +27,6 @@ stages:
       - bash: echo QADeploy, First Job
 - stage: ProdDeploy
   jobs:
-  -job: ProdDeployJob
-  steps:
-    - bash: echo ProdDeploy, First Job
+  - job: ProdDeployJob
+    steps:
+      - bash: echo ProdDeploy, First Job
