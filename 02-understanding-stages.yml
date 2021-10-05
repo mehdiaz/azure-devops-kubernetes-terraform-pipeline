@@ -17,11 +17,11 @@ stages:
       - bash: echo Build, Second Job
       - task: CopyFiles@2
         inputs:
-          SourceFolder: '$(System.WorkingDirectory)'
+          SourceFolder: '$(System.DefaultWorkingDirectory)'
           Contents: |
             **/*.yml
             **/*.tf
-          TargetFolder: '$(Build.TargetArtifactDirectory)'
+          TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 # - stage: DevDeploy
 #   variables:
